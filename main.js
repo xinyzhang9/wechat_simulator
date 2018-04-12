@@ -1,7 +1,11 @@
 function main() {
-  return xs.periodic(1000)
-    .fold(prev => prev + 1, 0)
-    .map(i => `second elapsed: ${i}`);
+  return {
+    DOM: xs.periodic(1000)
+      .fold(prev => prev + 1, 0)
+      .map(i => `second elapsed: ${i}`),
+    LOG: xs.periodic(2000)
+      .fold(prev => prev + 1, 0)
+  };
 }
 
 function domDriver(text$) {
@@ -21,5 +25,5 @@ function logDriver(msg$) {
   })
 }
 const sink = main();
-domDriver(sink);
-logDriver(sink);
+domDriver(sink.DOM);
+logDriver(sink.LOG);
