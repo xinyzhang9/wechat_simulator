@@ -1,0 +1,35 @@
+{
+  "name": "wechat_simulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "lite-server": "^2.3.0",
+    "systemjs": "^0.21.2",
+    "xstream": "^11.2.0"
+  },
+  "scripts": {
+    "test": "we are live!",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinyzhang9/wechat_simulator.git"
+  },
+  "keywords": [
+    "rxjs"
+  ],
+  "author": "xinyzhang9@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xinyzhang9/wechat_simulator/issues"
+  },
+  "homepage": "https://github.com/xinyzhang9/wechat_simulator#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "typescript": "^2.8.1"
+  }
+}
